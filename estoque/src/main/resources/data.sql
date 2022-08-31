@@ -1,0 +1,1 @@
+INSERT INTO Produto(nome, valor) VALUES ('Televisão', 3999)

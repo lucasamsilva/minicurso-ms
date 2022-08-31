@@ -1,0 +1,17 @@
+spring:
+  h2:
+    console.enabled: true
+  application:
+    name: estoque-service
+  datasource:
+    url: jdbc:h2:mem:testdb
+    username: sa
+    password:
+  jpa:
+    database-platform: org.hibernate.dialect.H2Dialect
+    defer-datasource-initialization: true
+server:
+    port: 0
+eureka:
+    instance:
+        instanceId: ${spring.application.name}:${spring.application.instance_id:${random.value}}

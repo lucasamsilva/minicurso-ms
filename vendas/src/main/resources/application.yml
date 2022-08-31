@@ -1,0 +1,21 @@
+spring:
+  h2:
+    console.enabled: true
+  rabbitmq:
+    addresses: amqps://lbozpljt:I21HWRfbuiSZzvX3ewyECJwXLTKMmmj7@jackal.rmq.cloudamqp.com/lbozpljt
+  application:
+    name: vendas-service
+  datasource:
+    url: jdbc:h2:mem:testdb
+    username: sa
+    password:
+  jpa:
+    database-platform: org.hibernate.dialect.H2Dialect
+    defer-datasource-initialization: true
+filas:
+    atualizar: atualizar
+server:
+    port: 0
+eureka:
+    instance:
+        instanceId: ${spring.application.name}:${spring.application.instance_id:${random.value}}
