@@ -1,7 +1,9 @@
-package com.minicurso.vendas.listener;
+package com.minicurso.vendas.rabbit.listener;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.minicurso.vendas.domain.Pedido;
+import com.minicurso.vendas.service.PedidosService;
 import org.springframework.amqp.core.Message;
 import org.springframework.amqp.rabbit.annotation.RabbitListener;
 import org.springframework.amqp.rabbit.core.RabbitTemplate;
@@ -13,13 +15,10 @@ import org.springframework.stereotype.Component;
 public class PagamentoListener {
 
     @Autowired
-    private RabbitTemplate rabbitTemplate;
+    private PedidosService service;
 
     @RabbitListener(queues = "${filas.atualizar}")
-    public void receive(@Payload String fileBody) throws JsonProcessingException {
-        System.out.println("Message " + fileBody);
-        var json = new ObjectMapper().writeValueAsString(fileBody).getBytes();
-        Message message = new Message(json);
-        rabbitTemplate.send("pagamentos", "pagamentos.processar", message);
+    public void resultadoProcessarPagamento(@Payload Pedido pedido) throws JsonProcessingException {
+        service.atualizarPedido(pedido);
     }
 }

@@ -12,7 +12,7 @@ public class ProdutoResponse {
 
     private Long id;
     private String nome;
-    private BigDecimal valor;
+    private BigDecimal valorUnitario;
     private Integer quantidade;
 
 }

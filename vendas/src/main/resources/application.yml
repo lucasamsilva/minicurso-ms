@@ -15,7 +15,7 @@ spring:
 filas:
     atualizar: atualizar
 server:
-    port: 0
+    port: 50000
 eureka:
     instance:
         instanceId: ${spring.application.name}:${spring.application.instance_id:${random.value}}
