@@ -19,10 +19,15 @@ public class ProcessarPagamentoPublisher {
     @Autowired
     private RabbitTemplate rabbitTemplate;
 
-    public void postarFilaProcessarPagamento(Pedido pedido) {
-        var pedidoId = pedido.getId().toString().getBytes();
-        Message message = new Message(pedidoId);
-        rabbitTemplate.send(PAGAMENTOS_EXCHANGE, PROCESSAR_PAGAMENTO_KEY, message);
+    public Pedido postarFilaProcessarPagamento(Pedido pedido) {
+        try {
+            var pedidoJson = new ObjectMapper().writeValueAsBytes(pedido);
+            Message message = new Message(pedidoJson);
+            rabbitTemplate.send(PAGAMENTOS_EXCHANGE, PROCESSAR_PAGAMENTO_KEY, message);
+            return pedido;
+        } catch (JsonProcessingException e) {
+            throw new RuntimeException(e);
+        }
     }
 
 }

@@ -15,7 +15,7 @@ public class ProdutosAggregator implements AggregationStrategy {
         produto.setQuantidade(quantidade);
         ArrayList<Produto> list = null;
         if (oldExchange == null) {
-            list = new ArrayList<Produto>();
+            list = new ArrayList<>();
             list.add(produto);
             newExchange.getIn().setBody(list);
             return newExchange;

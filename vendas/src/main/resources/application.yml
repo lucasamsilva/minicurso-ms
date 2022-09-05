@@ -2,7 +2,10 @@ spring:
   h2:
     console.enabled: true
   rabbitmq:
-    addresses: amqps://lbozpljt:I21HWRfbuiSZzvX3ewyECJwXLTKMmmj7@jackal.rmq.cloudamqp.com/lbozpljt
+    host: jackal.rmq.cloudamqp.com
+    virtualHost: lbozpljt
+    username: ${username}
+    password: ${password}
   application:
     name: vendas-service
   datasource:

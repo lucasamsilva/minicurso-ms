@@ -24,6 +24,7 @@ public class MontarPedidoProcessor implements Processor {
                 .build();
         adicionarProdutosPedido(pedido, produtos);
         exchange.getIn().setBody(pedido);
+        exchange.setProperty("pedido", pedido);
     }
 
     private void adicionarProdutosPedido(Pedido pedido, List<Produto> produtosPedido) {

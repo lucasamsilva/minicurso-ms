@@ -1,6 +1,5 @@
 package com.minicurso.vendas.representation;
 
-import com.minicurso.vendas.domain.Produto;
 import lombok.Builder;
 import lombok.Data;
 
