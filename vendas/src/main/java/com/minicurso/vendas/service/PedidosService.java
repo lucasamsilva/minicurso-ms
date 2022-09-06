@@ -78,8 +78,6 @@ public class PedidosService {
         pedido.setProdutos(produtos);
     }
 
-
-	@Transactional
 	public void atualizarPedido(Pedido pedido) {
 		pedidoRepository.updateStatus(pedido.getId(), pedido.getStatus());
 	}

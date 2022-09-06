@@ -7,10 +7,13 @@ import org.springframework.data.jpa.repository.Modifying;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;
 
+import javax.transaction.Transactional;
+
 @Repository
 public interface PedidoRepository extends JpaRepository<Pedido, Long> {
 
     @Modifying
     @Query("UPDATE Pedido p SET p.status = :status WHERE p.id = :id")
+    @Transactional
     void updateStatus(Long id, StatusEnum status);
 }
