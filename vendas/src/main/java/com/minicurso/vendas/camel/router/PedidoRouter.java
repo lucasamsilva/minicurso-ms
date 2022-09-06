@@ -19,7 +19,6 @@ import java.util.function.Function;
 public class PedidoRouter extends RouteBuilder {
 
     public static final String PEDIDO_ROUTER = "direct:pedidoFlow";
-
     private static final String PAGAMENTOS_EXCHANGE = "pagamento";
     private static final String PROCESSAR_PAGAMENTO_KEY = "pagamento.processar";
     private static final String FILA_PROCESSAR = String.format("spring-rabbitmq:%s?routingKey=%s", PAGAMENTOS_EXCHANGE, PROCESSAR_PAGAMENTO_KEY);
