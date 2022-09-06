@@ -30,7 +30,7 @@ public class Pedido {
     private List<ProdutoPedido> produtos;
     private BigDecimal valorTotal;
     @JsonSerialize(using = LocalDateTimeSerializer.class)
-    @JsonFormat(pattern = "yyyy-MM-dd hh:mm:ss")
+    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
     private LocalDateTime dataPedido;
     @Enumerated(EnumType.STRING)
     private StatusEnum status;
