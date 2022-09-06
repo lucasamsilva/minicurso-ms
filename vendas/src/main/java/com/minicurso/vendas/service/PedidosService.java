@@ -27,9 +27,4 @@ public class PedidosService {
 	public Pedido realizarPedido(List<Produto> produtos) {
 		return producerTemplate.requestBody(PEDIDO_ROUTER, produtos, Pedido.class);
 	}
-
-	@Transactional
-	public void atualizarPedido(Pedido pedido) {
-		pedidoRepository.updateStatus(pedido.getId(), pedido.getStatus());
-	}
 }
