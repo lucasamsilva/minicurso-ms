@@ -12,7 +12,7 @@
 	<artifactId>vendas</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>vendas</name>
-	<description>MS Vendas</description>
+	<description>Microsserviço Vendas</description>
 	<properties>
 		<java.version>11</java.version>
 		<spring-cloud.version>2021.0.1</spring-cloud.version>

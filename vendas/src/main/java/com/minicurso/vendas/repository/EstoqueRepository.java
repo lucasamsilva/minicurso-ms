@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import java.util.List;
 
 @Repository
-@FeignClient(name = "estoque-service", path="/produtos")
+@FeignClient(name = "estoque-service", path="/v1/produtos")
 public interface EstoqueRepository {
 
 	@GetMapping
