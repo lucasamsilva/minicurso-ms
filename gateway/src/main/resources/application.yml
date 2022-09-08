@@ -1,0 +1,37 @@
+spring:
+  application:
+    name: gateway-service
+  cloud:
+    gateway:
+      globalcors:
+        cors-configurations:
+          '[/**]':
+            allowedOrigins: "*"
+            allowedMethods:
+              - GET
+              - POST
+              - PATCH
+              - PUT
+            AllowedHeaders:
+              - Content-Type
+      default-filters:
+        - StripPrefix=1
+        - Retry
+      discovery:
+        locator:
+          enabled: true
+          lower-case-service-id: true
+      routes:
+        - id: estoque-service
+          uri: lb://estoque-service
+          predicates:
+            - Path=/estoque/**
+        - id: vendas-service
+          uri: lb://vendas-service
+          predicates:
+            - Path=/vendas/**
+server:
+  port: 8090
+eureka:
+  instance:
+    instanceId: ${spring.application.name}:${spring.application.instance_id:${random.value}}

@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.RestController;
 import com.minicurso.vendas.service.PedidosService;
 
 @RestController
-@RequestMapping("/pedidos")
+@RequestMapping("/v1/pedidos")
 public class PedidosController {
 
 	@Autowired

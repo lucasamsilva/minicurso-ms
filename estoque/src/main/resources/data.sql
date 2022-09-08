@@ -1,1 +1,7 @@
-INSERT INTO Produto(nome, valor) VALUES ('Televisão', 3999)
+INSERT INTO Produto(nome, valor) VALUES ('Televisão', 3999.90)
+INSERT INTO Produto(nome, valor) VALUES ('Geladeira', 2660.90)
+INSERT INTO Produto(nome, valor) VALUES ('Video Game', 4090.00)
+INSERT INTO Produto(nome, valor) VALUES ('Cama', 1499.90)
+INSERT INTO Produto(nome, valor) VALUES ('Smartphone', 4689.00)
+INSERT INTO Produto(nome, valor) VALUES ('Computador', 2700.00)
+INSERT INTO Produto(nome, valor) VALUES ('Sofá', 1750.00)

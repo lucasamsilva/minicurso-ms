@@ -1,6 +1,9 @@
 spring:
   h2:
-    console.enabled: true
+    console:
+      enabled: true
+      settings:
+        web-allow-others: true
   rabbitmq:
     host: jackal.rmq.cloudamqp.com
     virtualHost: lbozpljt
@@ -16,9 +19,9 @@ spring:
     database-platform: org.hibernate.dialect.H2Dialect
     defer-datasource-initialization: true
 filas:
-    atualizar: atualizar
+  atualizar: atualizar
 server:
-    port: 50000
+  port: 0
 eureka:
-    instance:
-        instanceId: ${spring.application.name}:${spring.application.instance_id:${random.value}}
+  instance:
+    instanceId: ${spring.application.name}:${spring.application.instance_id:${random.value}}
