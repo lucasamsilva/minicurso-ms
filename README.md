@@ -121,15 +121,6 @@ Acesse o diretório `/estoque` por meio do CMD e execute os seguinte comandos:
 
 A aplicação iniciará em uma porta aleatória e se registrará no Eureka, sendo possível certificar sua correta execução acessando [`http://localhost:8761`](http://localhost:8761).
 
-## Estoque
-Acesse o diretório `/estoque` por meio do CMD e execute os seguinte comandos:
-
- - `mvn package`
- - `cd target`
- - `java -jar estoque-0.0.1-SNAPSHOT.jar`
-
-A aplicação iniciará em uma porta aleatória e se registrará no Eureka, sendo possível certificar sua correta execução acessando [`http://localhost:8761`](http://localhost:8761).
-
 ## Vendas
 Para execução dessa aplicação é necessário ter uma instância RabbitMQ criada e substituir as informações de host e autenticação corretamente nos comandos a seguir para definição de variáveis de ambiente. Lembrando que o comando `set` é válido para o sistema operacional Windows, em caso de utilização de outro sistema é necessário utilizar o comando de variáveis de ambiente específico do sistema.
 Acesse o diretório `/vendas` por meio do CMD e execute os seguinte comandos:
@@ -144,14 +135,13 @@ Acesse o diretório `/vendas` por meio do CMD e execute os seguinte comandos:
 
 A aplicação iniciará em uma porta aleatória e se registrará no Eureka, sendo possível certificar sua correta execução acessando [`http://localhost:8761`](http://localhost:8761).
 
-## Vendas
+## Pagamentos
 Para execução dessa aplicação é necessário ter uma instância RabbitMQ criada e substituir as informações de host  corretamente nos comandos a seguir para definição de variáveis de ambiente. Lembrando que o comando `set` é válido para o sistema operacional Windows, em caso de utilização de outro sistema é necessário utilizar o comando de variáveis de ambiente específico do sistema.
 Acesse o diretório `/pagamento` por meio do CMD e execute os seguinte comandos:
 
 - `set RABBIT_HOST={seu_host_rabbitmq}` 
 **Observação**: (deve ser informado no formato `amqps://{username}:{password}@{host}/{virtual_host}`)`
- - `mvn package`
- - `cd target`
- - `java -jar vendas-0.0.1-SNAPSHOT.jar`
+ - `npm install`
+ - `node index.js`
 
 A aplicação iniciará e ficará aguardando mensagens do rabbitMQ.
