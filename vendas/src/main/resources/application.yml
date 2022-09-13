@@ -5,8 +5,8 @@ spring:
       settings:
         web-allow-others: true
   rabbitmq:
-    host: jackal.rmq.cloudamqp.com
-    virtualHost: lbozpljt
+    host: ${host}
+    virtualHost: ${virtualHost}
     username: ${username}
     password: ${password}
   application:
