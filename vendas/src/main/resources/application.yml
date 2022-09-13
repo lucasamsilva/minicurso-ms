@@ -3,7 +3,7 @@ spring:
     console:
       enabled: true
       settings:
-        web-allow-others: true
+        web-allow-others: true1
   rabbitmq:
     host: jackal.rmq.cloudamqp.com
     virtualHost: lbozpljt
