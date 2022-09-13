@@ -65,6 +65,8 @@ curl --request GET \
 ## Java
 Necessário instalar a JDK 11 para o sistema operacional utilizado, download disponível em: [Java Archive Downloads - Java SE 11 | Oracle Brasil](https://www.oracle.com/br/java/technologies/javase/jdk11-archive-downloads.html)
 
+## Node.JS
+Realizar download e instalação do Node.JS a partir do seguinte link: [Node.js (nodejs.org)](https://nodejs.org/en/). Recomendado realizar o download da última versão LTS.
 ## Maven
  É necessário que a máquina utilizada tenha o Maven instalado, caso não tenha é possível realizar a instalação seguindo o passo a passo presente no link: [How to Install Maven on Windows, Linux, and Mac | Baeldung](https://www.baeldung.com/install-maven-on-windows-linux-mac)
 
