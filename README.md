@@ -138,7 +138,7 @@ Acesse o diretório `/vendas` por meio do CMD e execute os seguinte comandos:
 - `set host={seu_host_rabbitmq}`
 - `set virtualHost={seu_virtual_host_rabbitmq}`
  - `set username={seu_username_rabbitmq}`
- - `set virtualHost={sua_senha_rabbitmq}`
+ - `set password={sua_senha_rabbitmq}`
  - `mvn package`
  - `cd target`
  - `java -jar vendas-0.0.1-SNAPSHOT.jar`
