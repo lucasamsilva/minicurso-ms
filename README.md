@@ -94,6 +94,14 @@ Para realização das chamadas HTTP é necessário uma aplicação que permita a
 
 # Executando os projetos
 É recomendável que para cada uma das aplicações a seguir os passos sejam seguidos em CMD's diferentes, pois dessa maneira a aplicação estará funcionando por completo.
+## RabbitMQ
+- Em seu painel de configuração do RabbitMQ acesse a aba `Exchanges` e crie uma *exchange* com o nome *pagamento*.
+- Após isso na aba `Queues` crie duas filas de nomes *atualizar* e *processar*
+- Ainda na aba `Queues` acesse a fila *atualizar* e no sub-menu `Bindings` crie uma nova *binding* com o nome da exchange `pagamento` e com a *routing key* `pagamento.atualizar`
+- - Voltando na aba `Queues` acesse a fila *processar* e no sub-menu `Bindings` crie uma nova *binding* com o nome da exchange `pagamento` e com a *routing key* `pagamento.processar`
+
+**Suas informações de conexão do RabbitMQ podem ser encontradas em seu painel de conta no site CloudAMQP ou são configuradas no momento da criação de seu container Docker, de acordo com o método escolhido para criação da instância RabbitMQ.**
+
 ## Eureka
 Acesse o diretório `/eureka` por meio do CMD e execute os seguinte comandos:
 
