@@ -1,8 +1,9 @@
 const amqplib = require('amqplib')
 const processarPagamento = require("./ProcessarPagamento")
+const rabbitHost = process.env.RABBIT_HOST;
 
 const conectar = async () => {
-    const conn = await amqplib.connect("amqps://lbozpljt:I21HWRfbuiSZzvX3ewyECJwXLTKMmmj7@jackal.rmq.cloudamqp.com/lbozpljt");
+    const conn = await amqplib.connect(rabbitHost);
     return conn.createChannel();
 }
 
@@ -27,7 +28,3 @@ const postarFilaAtualizacao = async (conexao, mensagem) => {
 }
 
 consumirFilaProcessamento();
-
-
-
-
