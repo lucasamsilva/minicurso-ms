@@ -7,10 +7,13 @@ import com.minicurso.vendas.representation.ProdutoRequest;
 import com.minicurso.vendas.representation.ProdutoResponse;
 import com.minicurso.vendas.representation.RealizarPedidoRequest;
 import com.minicurso.vendas.representation.RealizarPedidoResponse;
+import lombok.AccessLevel;
+import lombok.NoArgsConstructor;
 
 import java.util.List;
 import java.util.stream.Collectors;
 
+@NoArgsConstructor(access = AccessLevel.PRIVATE)
 public class PedidoMapper {
 
     public static List<Produto> toDomain(RealizarPedidoRequest request) {

@@ -3,8 +3,7 @@ const processarPagamento = require("./ProcessarPagamento")
 
 const conectar = async () => {
     const conn = await amqplib.connect("amqps://lbozpljt:I21HWRfbuiSZzvX3ewyECJwXLTKMmmj7@jackal.rmq.cloudamqp.com/lbozpljt");
-    const conexao = await conn.createChannel();
-    return conexao;
+    return conn.createChannel();
 }
 
 const consumirFilaProcessamento = async () => {
